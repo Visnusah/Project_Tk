@@ -41,7 +41,7 @@ login_msg.place(relx=0.5, rely=0.25, anchor=TK.CENTER) # Place the message in th
 
 # Create entry fields for username and password
 username = CTkEntry(master=login_frame, corner_radius=20, border_color="black", border_width=1.2, placeholder_text="Enter your username", width=300, height=40 )
-password = CTkEntry(master=login_frame, corner_radius=20, border_color="black", border_width=1.2, placeholder_text="Enter your password", show="@", width=300, height=40)
+password = CTkEntry(master=login_frame, corner_radius=20, border_color="black", border_width=1.2, placeholder_text="Enter your password", show="*", width=300, height=40)
 
 # Place the entry fields in the frame
 username.place(relx=0.5, rely=0.43, anchor=TK.CENTER)
