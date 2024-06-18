@@ -8,11 +8,27 @@ import tkinter as tk
 
 # then we need to create a window
 root = tk.Tk()
+# root.iconbitmap("icon.ico")
+
+
+
+
+
+
 
 
 # set the geometry and title of the window
-root.geometry("400x350")
 root.title("Hello World")
+# root.geometry("400x350")
+
+# root.resizable(False, False)
+# root.resizable(0,0)
+
+# root.maxsize(400,350) # set the maximum size of the window , width = 400, height = 350
+# root.minsize(200, 250) # set the minimum size of the window , width = 400, height = 350
+# root.state("zoomed") # maximize the window
+
+
 
 
 # create a label
