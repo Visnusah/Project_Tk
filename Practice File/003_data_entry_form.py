@@ -18,8 +18,6 @@ FN2 = font=("Arial", 15, "bold")
 user_info_frame = tk.LabelFrame(frame, text="User Information", font=FN2)
 user_info_frame.grid(row=0, column=0, padx=30, pady=30)
 
-
-
 # create Label widget //NOTE: Label widget is used to create a text
 first_name = tk.Label(user_info_frame, text="First Name: ", font=FN1)
 last_name = tk.Label(user_info_frame, text="Last Name: ", font=FN1)
@@ -64,5 +62,8 @@ for widget in user_info_frame.winfo_children():
 
 
 # second frame for contact information
+courses_frame = tk.LabelFrame(frame, text="Courses", font=FN2) 
+courses_frame.grid(row=1, column=0, sticky="news", padx=30, pady=30)
+
 
 window.mainloop()
