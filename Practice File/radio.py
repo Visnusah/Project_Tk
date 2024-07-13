@@ -24,32 +24,32 @@
 
 
 # NOTE: This is the same code as above but the only difference is the value of the radio button.
-# from tkinter import *
+from tkinter import *
 
-# root = Tk()
-# root.geometry("400x300")
+root = Tk()
+root.geometry("400x300")
 
-# def add():
-#   value = var.get()
-#   # print(value)
-#   # print(var.get())
-#   label.config(text=f"{value}")
+def add():
+  value = var.get()
+  # print(value)
+  # print(var.get())
+  label.config(text=f"{value}")
 
-# label = Label(root, text="values")
-# label.pack(anchor=W)
+label = Label(root, text="values")
+label.pack(anchor=W)
 
 
-# var = StringVar()
-# r1 = Radiobutton(root, text="Music", variable=var, value="Music", command=add)
-# r1.pack(anchor=W)
+var = StringVar()
+r1 = Radiobutton(root, text="Music", variable=var, value="Music", command=add)
+r1.pack(anchor=W)
 
-# r2 = Radiobutton(root, text="Football", variable=var, value="Football", command=add)
-# r2.pack(anchor=W)
+r2 = Radiobutton(root, text="Football", variable=var, value="Football", command=add)
+r2.pack(anchor=W)
 
-# btn = Button(root, text="Submit", command=add)
-# btn.pack(anchor=W)
+btn = Button(root, text="Submit", command=add)
+btn.pack(anchor=W)
 
-# root.mainloop()
+root.mainloop()
 
 
 # NOTE: This is the same code as above but the only difference is the value of the radio button.

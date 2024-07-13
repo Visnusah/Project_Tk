@@ -101,16 +101,6 @@ def update(record_id):
   conn.commit()
   conn.close()
   editor.destroy()
-
-  
-  
-    
-  
-    
-  
-  
-  
-  
   
 # NOTE: The global keyword is used in the edit function to allow the function to modify variables that are defined outside of its scope.
 def edit():
