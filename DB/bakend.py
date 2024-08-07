@@ -108,13 +108,17 @@ def edit():
     editor = Tk()
     editor.title("update data")
     editor.geometry("400x400")
+    
     global username_editor
     global address_editor
     global role_editor
     global salary_editor
+    
     conn = db.connect("database.db")
     c = conn.cursor()
+    
     record_id = delete_box.get()
+    
     c.execute("SELECT * FROM user WHERE oid=" + record_id)
     records = c.fetchall()
     username_editor = Entry(editor, width=30)
@@ -125,6 +129,7 @@ def edit():
     role_editor.grid(row=2, column=1)
     salary_editor = Entry(editor, width=30)
     salary_editor.grid(row=3, column=1)
+    
     # Create textbox labels
     username_label = Label(editor, text="USERNAME")
     username_label.grid(row=0, column=0, pady=(10, 0))
@@ -134,12 +139,14 @@ def edit():
     role_label.grid(row=2, column=0)
     salary_label = Label(editor, text="SALARY")
     salary_label.grid(row=3, column=0)
+    
     for record in records:
         username_editor.insert(0, record[0]) # 0 -> is the position where the data is inserted
         address_editor.insert(0, record[1])
         role_editor.insert(0, record[2])
         salary_editor.insert(0, record[3])
-    edit_btn = Button(editor, text="SAVE", command= lambda: update(record_id))
+        
+    edit_btn = Button(editor, text="SAVE", command=lambda: update(record_id))
     edit_btn.grid(row=6, column=0, columnspan=2, pady=10, padx=10, ipadx=125)
     
     exit_btn = Button(editor, text="EXIT", command=editor.quit)
